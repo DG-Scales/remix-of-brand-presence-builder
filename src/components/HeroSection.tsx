@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, TrendingUp, Target, BarChart3 } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -25,19 +25,19 @@ export default function HeroSection() {
         >
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Welcome to DGScales
+            Facebook & Meta Ads Agency
           </div>
 
           <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-foreground">
-            We Build
+            Scale Your
             <br />
-            <span className="text-primary">Digital</span>
+            <span className="text-primary">Revenue</span>
             <br />
-            Experiences
+            With Ads
           </h1>
 
           <p className="text-muted-foreground text-lg md:text-xl max-w-lg leading-relaxed">
-            A creative duo crafting modern solutions and pushing the boundaries of what's possible in the digital space.
+            We run high-performing Facebook & Instagram ad campaigns that drive real results. More leads, more sales, more growth — guaranteed.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -45,14 +45,30 @@ export default function HeroSection() {
               href="#contact"
               className="bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-base hover:opacity-90 transition-all hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5"
             >
-              Contact Us
+              Get a Free Consultation
             </a>
             <a
               href="#about"
               className="bg-secondary text-secondary-foreground border border-border px-8 py-4 rounded-xl font-semibold text-base hover:bg-secondary/80 transition-all hover:-translate-y-0.5"
             >
-              View Our Work
+              See How It Works
             </a>
+          </div>
+
+          {/* Stats row */}
+          <div className="flex flex-wrap gap-8 pt-4">
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 text-primary" />
+              <span className="text-sm text-muted-foreground"><strong className="text-foreground">3x</strong> Avg. ROAS</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Target className="w-5 h-5 text-primary" />
+              <span className="text-sm text-muted-foreground"><strong className="text-foreground">100+</strong> Campaigns</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <BarChart3 className="w-5 h-5 text-primary" />
+              <span className="text-sm text-muted-foreground"><strong className="text-foreground">$500K+</strong> Ad Spend Managed</span>
+            </div>
           </div>
         </motion.div>
 
@@ -67,8 +83,12 @@ export default function HeroSection() {
             <div className="w-80 h-80 rounded-3xl bg-primary/10 border border-primary/20 flex items-center justify-center animate-float">
               <span className="font-heading text-7xl font-bold text-primary/30">DGS</span>
             </div>
-            <div className="absolute -top-6 -right-6 w-24 h-24 rounded-2xl bg-primary/20 animate-float" style={{ animationDelay: "1s" }} />
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-xl bg-primary/15 animate-float" style={{ animationDelay: "3s" }} />
+            <div className="absolute -top-6 -right-6 w-24 h-24 rounded-2xl bg-primary/20 animate-float flex items-center justify-center" style={{ animationDelay: "1s" }}>
+              <TrendingUp className="w-10 h-10 text-primary/40" />
+            </div>
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-xl bg-primary/15 animate-float flex items-center justify-center" style={{ animationDelay: "3s" }}>
+              <Target className="w-7 h-7 text-primary/40" />
+            </div>
           </div>
         </motion.div>
       </div>
