@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 export default function ContactSection() {
   const ref = useRef(null);
@@ -17,6 +18,7 @@ export default function ContactSection() {
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errs.email = "Invalid email format";
     if (!form.subject.trim()) errs.subject = "Subject is required";
     if (!form.message.trim()) errs.message = "Message is required";
+    else if (form.message.length > 5000) errs.message = "Message is too long (max 5000 characters)";
     setErrors(errs);
     return Object.keys(errs).length === 0;
   };
@@ -25,14 +27,32 @@ export default function ContactSection() {
     e.preventDefault();
     if (!validate()) return;
     setLoading(true);
-    // Simulate sending - replace with actual API
-    await new Promise((r) => setTimeout(r, 1500));
-    setLoading(false);
-    toast.success("Message sent successfully!", {
-      description: "We'll get back to you as soon as possible.",
-      icon: <CheckCircle className="w-5 h-5" />,
-    });
-    setForm({ name: "", email: "", subject: "", message: "" });
+
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: form.name.trim(),
+          email: form.email.trim(),
+          subject: form.subject.trim(),
+          message: form.message.trim(),
+        },
+      });
+
+      if (error) throw error;
+
+      toast.success("Message sent successfully!", {
+        description: "We'll get back to you as soon as possible.",
+        icon: <CheckCircle className="w-5 h-5" />,
+      });
+      setForm({ name: "", email: "", subject: "", message: "" });
+    } catch (err) {
+      console.error("Contact form error:", err);
+      toast.error("Failed to send message", {
+        description: "Please try again or email us directly at dgsales.business@gmail.com",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputClass = (field: string) =>
@@ -58,8 +78,8 @@ export default function ContactSection() {
               <br />
               Your Ads
             </h2>
-             <p className="text-muted-foreground text-lg mt-4 max-w-md leading-relaxed">
-               Ready to scale your business with Facebook ads? Fill out the form and we'll get back to you within 24 hours with a free strategy call.
+            <p className="text-muted-foreground text-lg mt-4 max-w-md leading-relaxed">
+              Ready to scale your business with Facebook ads? Fill out the form and we'll get back to you within 24 hours with a free strategy call.
             </p>
           </div>
 
@@ -130,7 +150,7 @@ export default function ContactSection() {
           </div>
           <div>
             <textarea
-              placeholder="Your Message"
+              placeholder="Tell us about your business and goals..."
               rows={5}
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -155,7 +175,7 @@ export default function ContactSection() {
             ) : (
               <>
                 <Send className="w-5 h-5" />
-                Send Message
+                Get Your Free Strategy Call
               </>
             )}
           </button>
