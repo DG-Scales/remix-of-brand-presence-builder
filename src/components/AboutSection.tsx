@@ -1,20 +1,43 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code, Palette } from "lucide-react";
+import { Megaphone, BarChart3, Target, Zap } from "lucide-react";
 
 const founders = [
   {
     name: "Founder One",
-    role: "Co-Founder & Developer",
-    bio: "Passionate about clean code and building robust digital products that make an impact.",
-    icon: Code,
+    role: "Co-Founder & Ad Strategist",
+    bio: "Expert in crafting high-converting Facebook ad funnels and scaling campaigns profitably. Obsessed with ROAS and data-driven decisions.",
+    icon: Megaphone,
   },
   {
     name: "Founder Two",
-    role: "Co-Founder & Designer",
-    bio: "Creative thinker with an eye for design, focused on crafting beautiful and intuitive user experiences.",
-    icon: Palette,
+    role: "Co-Founder & Creative Director",
+    bio: "Creates scroll-stopping ad creatives and compelling copy that turns cold audiences into paying customers.",
+    icon: Zap,
+  },
+];
+
+const services = [
+  {
+    title: "Facebook & Instagram Ads",
+    description: "Full-funnel ad campaigns optimized for conversions, leads, and sales across Meta platforms.",
+    icon: Megaphone,
+  },
+  {
+    title: "Audience Targeting",
+    description: "Precision targeting using custom audiences, lookalikes, and interest-based strategies to reach your ideal customer.",
+    icon: Target,
+  },
+  {
+    title: "Performance Analytics",
+    description: "Transparent reporting and real-time dashboards so you always know exactly how your ads are performing.",
+    icon: BarChart3,
+  },
+  {
+    title: "Creative & Copywriting",
+    description: "Thumb-stopping creatives and persuasive ad copy designed to maximize your click-through and conversion rates.",
+    icon: Zap,
   },
 ];
 
@@ -46,6 +69,28 @@ function FounderCard({ founder, index }: { founder: typeof founders[0]; index: n
   );
 }
 
+function ServiceCard({ service, index }: { service: typeof services[0]; index: number }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const Icon = service.icon;
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="glass-card p-6 md:p-8 group hover:border-primary/30 transition-all duration-300"
+    >
+      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+        <Icon className="w-6 h-6 text-primary" />
+      </div>
+      <h3 className="font-heading text-lg font-bold text-foreground mb-2">{service.title}</h3>
+      <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
+    </motion.div>
+  );
+}
+
 export default function AboutSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
@@ -53,6 +98,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="section-padding bg-background relative">
       <div className="max-w-7xl mx-auto">
+        {/* Services */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -60,14 +106,31 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
+          <span className="text-primary font-medium text-sm tracking-widest uppercase">What We Do</span>
+          <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3">
+            Ads That Actually Convert
+          </h2>
+          <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
+            We handle everything — strategy, creatives, targeting, and optimization — so you can focus on running your business.
+          </p>
+        </motion.div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+          {services.map((service, i) => (
+            <ServiceCard key={service.title} service={service} index={i} />
+          ))}
+        </div>
+
+        {/* Founders */}
+        <div className="text-center mb-16">
           <span className="text-primary font-medium text-sm tracking-widest uppercase">Who We Are</span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3">
             Meet the Founders
           </h2>
           <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
-            Two passionate creators building the future of digital experiences together.
+            Two ad specialists on a mission to help businesses scale profitably through paid advertising.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {founders.map((founder, i) => (
