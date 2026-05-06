@@ -65,7 +65,7 @@ export default function HeroSection() {
         >
           <div className="relative">
             <div className="w-80 h-80 rounded-3xl bg-primary/10 border border-primary/20 flex items-center justify-center animate-float">
-              <span className="font-heading text-8xl font-bold text-primary/30">DG</span>
+              <span className="font-heading text-7xl font-bold text-primary/30">DGS</span>
             </div>
             <div className="absolute -top-6 -right-6 w-24 h-24 rounded-2xl bg-primary/20 animate-float" style={{ animationDelay: "1s" }} />
             <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-xl bg-primary/15 animate-float" style={{ animationDelay: "3s" }} />
