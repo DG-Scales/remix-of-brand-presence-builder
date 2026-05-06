@@ -54,12 +54,12 @@ export default function ContactSection() {
           <div>
             <span className="text-primary font-medium text-sm tracking-widest uppercase">Contact</span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3">
-              Let's Work
+              Let's Scale
               <br />
-              Together
+              Your Ads
             </h2>
-            <p className="text-muted-foreground text-lg mt-4 max-w-md leading-relaxed">
-              Have a project in mind or just want to say hello? Drop us a message and we'll get back to you promptly.
+             <p className="text-muted-foreground text-lg mt-4 max-w-md leading-relaxed">
+               Ready to scale your business with Facebook ads? Fill out the form and we'll get back to you within 24 hours with a free strategy call.
             </p>
           </div>
 
