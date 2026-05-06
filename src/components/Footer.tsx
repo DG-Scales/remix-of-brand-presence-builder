@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img src={logo} alt="DG Logo" className="h-10 w-auto rounded" />
-              <span className="font-heading font-bold text-xl text-foreground">DG</span>
+              <span className="font-heading font-bold text-xl text-foreground">DGScales</span>
             </div>
             <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
               A creative duo building modern digital experiences.
@@ -43,12 +43,12 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-heading font-semibold text-foreground mb-4">Get in Touch</h4>
-            <p className="text-muted-foreground text-sm">hello@dgstudio.com</p>
+            <p className="text-muted-foreground text-sm">dgsales.business@gmail.com</p>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between mt-12 pt-8 border-t border-border">
-          <p className="text-muted-foreground text-sm">&copy; {new Date().getFullYear()} DG. All rights reserved.</p>
+          <p className="text-muted-foreground text-sm">&copy; {new Date().getFullYear()} DGScales. All rights reserved.</p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="mt-4 md:mt-0 p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors group"

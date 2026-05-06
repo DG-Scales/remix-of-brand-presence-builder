@@ -25,7 +25,7 @@ export default function HeroSection() {
         >
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Welcome to DG
+            Welcome to DGScales
           </div>
 
           <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-foreground">
@@ -49,7 +49,7 @@ export default function HeroSection() {
             </a>
             <a
               href="#about"
-              className="border border-border text-foreground px-8 py-4 rounded-xl font-semibold text-base hover:bg-secondary transition-all hover:-translate-y-0.5"
+              className="bg-secondary text-secondary-foreground border border-border px-8 py-4 rounded-xl font-semibold text-base hover:bg-secondary/80 transition-all hover:-translate-y-0.5"
             >
               View Our Work
             </a>
@@ -65,7 +65,7 @@ export default function HeroSection() {
         >
           <div className="relative">
             <div className="w-80 h-80 rounded-3xl bg-primary/10 border border-primary/20 flex items-center justify-center animate-float">
-              <span className="font-heading text-8xl font-bold text-primary/30">DG</span>
+              <span className="font-heading text-7xl font-bold text-primary/30">DGS</span>
             </div>
             <div className="absolute -top-6 -right-6 w-24 h-24 rounded-2xl bg-primary/20 animate-float" style={{ animationDelay: "1s" }} />
             <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-xl bg-primary/15 animate-float" style={{ animationDelay: "3s" }} />
