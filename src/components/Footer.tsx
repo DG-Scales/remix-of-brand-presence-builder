@@ -1,11 +1,13 @@
 import { ArrowUp } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 const quickLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#about" },
-  { label: "Contact", href: "#contact" },
-  { label: "Socials", href: "#socials" },
+  { label: "Home", href: "/", isRoute: true },
+  { label: "Services", href: "/#about", isRoute: true },
+  { label: "Contact", href: "/contact", isRoute: true },
+  { label: "Reviews", href: "/reviews", isRoute: true },
+  { label: "Socials", href: "/#socials", isRoute: true },
 ];
 
 export default function Footer() {
@@ -29,13 +31,13 @@ export default function Footer() {
             <h4 className="font-heading font-semibold text-foreground mb-4">Quick Links</h4>
             <div className="flex flex-col gap-2">
               {quickLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
                   className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
