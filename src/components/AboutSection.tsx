@@ -11,9 +11,9 @@ const founders = [
     icon: Megaphone,
   },
   {
-    name: "Founder Two",
-    role: "Co-Founder & Creative Director",
-    bio: "Creates scroll-stopping ad creatives and compelling copy that turns cold audiences into paying customers.",
+    name: "Devan Labbe",
+    role: "Co-Founder — Client Relations, Sales & Creatives",
+    bio: "Responsible for closing clients, leading collaborations, and customizing creatives and ad campaigns. Works hand-in-hand with every client — checking in regularly and staying on top of their needs and goals to ensure ads deliver real results.",
     icon: Zap,
   },
 ];
