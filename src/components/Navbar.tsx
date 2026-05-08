@@ -1,19 +1,22 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Moon, Sun } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#about" },
-  { label: "Contact", href: "#contact" },
-  { label: "Socials", href: "#socials" },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/#about" },
+  { label: "Contact", href: "/contact" },
+  { label: "Reviews", href: "/reviews" },
+  { label: "Socials", href: "/#socials" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dark, setDark] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", dark);
@@ -25,6 +28,25 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Handle hash scrolling when navigating from another page
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 100);
+      }
+    }
+  }, [location]);
+
+  const handleNavClick = (href: string) => {
+    setMobileOpen(false);
+    // If we're on the home page and the link is a hash link on home, scroll to it
+    if (location.pathname === "/" && href.startsWith("/#")) {
+      const el = document.querySelector(href.replace("/", ""));
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -35,20 +57,21 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3">
           <img src={logo} alt="DG Logo" className="h-10 w-auto rounded" />
           <span className="font-heading font-bold text-xl text-foreground">DGScales</span>
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
-              href={link.href}
+              to={link.href}
+              onClick={() => handleNavClick(link.href)}
               className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium tracking-wide"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
           <button
             onClick={() => setDark(!dark)}
@@ -57,12 +80,12 @@ export default function Navbar() {
           >
             {dark ? <Sun className="w-4 h-4 text-foreground" /> : <Moon className="w-4 h-4 text-foreground" />}
           </button>
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
           >
             Get in Touch
-          </a>
+          </Link>
         </div>
 
         <button
@@ -84,14 +107,14 @@ export default function Navbar() {
           >
             <div className="flex flex-col p-6 gap-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
+                  to={link.href}
+                  onClick={() => handleNavClick(link.href)}
                   className="text-foreground font-medium text-lg"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <div className="flex items-center gap-3 pt-2">
                 <button
@@ -101,13 +124,13 @@ export default function Navbar() {
                 >
                   {dark ? <Sun className="w-4 h-4 text-foreground" /> : <Moon className="w-4 h-4 text-foreground" />}
                 </button>
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   onClick={() => setMobileOpen(false)}
                   className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold flex-1 text-center"
                 >
                   Get in Touch
-                </a>
+                </Link>
               </div>
             </div>
           </motion.div>
