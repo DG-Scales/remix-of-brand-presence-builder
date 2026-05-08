@@ -55,7 +55,7 @@ export default function SocialSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {socials.map((social, i) => {
             const Icon = social.icon;
             return (
