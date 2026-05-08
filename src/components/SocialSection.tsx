@@ -28,7 +28,7 @@ const TikTokIcon = () => (
 );
 
 const socials = [
-  { name: "dg_scales Insta", icon: InstagramIcon, url: "https://www.instagram.com/dg_scales/", color: "hover:text-pink-500" },
+  { name: "dg_scales Instagram", icon: InstagramIcon, url: "https://www.instagram.com/dg_scales/", color: "hover:text-pink-500" },
   { name: "DG Scales Facebook", icon: FacebookIcon, url: "https://www.facebook.com/profile.php?id=61573364082257", color: "hover:text-blue-500" },
   { name: "TikTok", icon: TikTokIcon, url: "https://tiktok.com", color: "hover:text-foreground" },
 ];
