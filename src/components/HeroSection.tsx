@@ -67,7 +67,7 @@ export default function HeroSection() {
             </div>
             <div className="flex items-center gap-2">
               <BarChart3 className="w-5 h-5 text-primary" />
-              <span className="text-sm text-muted-foreground"><strong className="text-foreground">$500K+</strong> Ad Spend Managed</span>
+              <span className="text-sm text-muted-foreground"><strong className="text-foreground">$200K+</strong> Ad Spend Managed</span>
             </div>
           </div>
         </motion.div>
