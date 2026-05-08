@@ -23,8 +23,8 @@ const TikTokIcon = () => (
 );
 
 const socials = [
-  { name: "Instagram", icon: InstagramIcon, url: "https://instagram.com", color: "hover:text-pink-500" },
-  { name: "Twitter / X", icon: TwitterIcon, url: "https://x.com", color: "hover:text-foreground" },
+  { name: "Instagram", icon: InstagramIcon, url: "https://www.instagram.com/dg_scales/", color: "hover:text-pink-500" },
+  { name: "Facebook", icon: FacebookIcon, url: "https://www.facebook.com/profile.php?id=61573364082257", color: "hover:text-blue-500" },
   { name: "YouTube", icon: YoutubeIcon, url: "https://youtube.com", color: "hover:text-red-500" },
   { name: "TikTok", icon: TikTokIcon, url: "https://tiktok.com", color: "hover:text-foreground" },
 ];
