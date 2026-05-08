@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, TrendingUp, Target, BarChart3 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
@@ -41,12 +42,12 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-base hover:opacity-90 transition-all hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5"
             >
               Get a Free Consultation
-            </a>
+            </Link>
             <a
               href="#about"
               className="bg-secondary text-secondary-foreground border border-border px-8 py-4 rounded-xl font-semibold text-base hover:bg-secondary/80 transition-all hover:-translate-y-0.5"
