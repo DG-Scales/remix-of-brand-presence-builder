@@ -72,7 +72,7 @@ export default function ContactSection() {
           className="space-y-8"
         >
           <div>
-            <span className="text-primary font-medium text-sm tracking-widest uppercase">Contact</span>
+            <span className="text-accent font-medium text-sm tracking-widest uppercase">Contact</span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3">
               Let's Scale
               <br />
