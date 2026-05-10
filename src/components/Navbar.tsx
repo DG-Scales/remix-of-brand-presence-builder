@@ -88,7 +88,7 @@ export default function Navbar() {
           </a>
           <Link
             to="/contact"
-            className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
+            className="btn-primary-glow text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold"
           >
             Get in Touch
           </Link>

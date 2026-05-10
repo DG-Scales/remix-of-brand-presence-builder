@@ -16,7 +16,7 @@ const Reviews = () => {
               transition={{ duration: 0.6 }}
               className="space-y-8"
             >
-              <span className="text-primary font-medium text-sm tracking-widest uppercase">
+              <span className="text-accent font-medium text-sm tracking-widest uppercase">
                 Reviews
               </span>
               <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3">
@@ -35,7 +35,7 @@ const Reviews = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: star * 0.1 }}
                   >
-                    <Star className="w-10 h-10 text-yellow-400 fill-yellow-400" />
+                    <Star className="w-10 h-10 text-accent fill-[hsl(var(--accent))]" />
                   </motion.div>
                 ))}
               </div>
@@ -47,7 +47,7 @@ const Reviews = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-all hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5"
+                className="btn-primary-glow inline-flex items-center gap-3 text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg"
               >
                 <Star className="w-5 h-5" />
                 Leave a 5-Star Review on Google

@@ -63,7 +63,7 @@ function FounderCard({ founder, index }: { founder: typeof founders[0]; index: n
         </span>
       </div>
       <h3 className="font-heading text-2xl font-bold text-foreground mb-1">{founder.name}</h3>
-      <p className="text-primary font-medium text-sm mb-4">{founder.role}</p>
+      <p className="text-accent font-medium text-sm mb-4">{founder.role}</p>
       <p className="text-muted-foreground leading-relaxed">{founder.bio}</p>
     </motion.div>
   );
@@ -106,7 +106,7 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-medium text-sm tracking-widest uppercase">What We Do</span>
+          <span className="text-accent font-medium text-sm tracking-widest uppercase">What We Do</span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3">
             Ads That Actually Convert
           </h2>
@@ -123,7 +123,7 @@ export default function AboutSection() {
 
         {/* Founders */}
         <div className="text-center mb-16">
-          <span className="text-primary font-medium text-sm tracking-widest uppercase">Who We Are</span>
+          <span className="text-accent font-medium text-sm tracking-widest uppercase">Who We Are</span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3">
             Meet the Founders
           </h2>

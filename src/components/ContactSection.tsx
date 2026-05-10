@@ -72,7 +72,7 @@ export default function ContactSection() {
           className="space-y-8"
         >
           <div>
-            <span className="text-primary font-medium text-sm tracking-widest uppercase">Contact</span>
+            <span className="text-accent font-medium text-sm tracking-widest uppercase">Contact</span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3">
               Let's Scale
               <br />
@@ -174,7 +174,7 @@ export default function ContactSection() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-primary text-primary-foreground py-4 rounded-xl font-semibold text-base hover:opacity-90 transition-all disabled:opacity-50 flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-primary/25"
+            className="btn-primary-glow w-full text-primary-foreground py-4 rounded-xl font-semibold text-base disabled:opacity-50 flex items-center justify-center gap-2"
           >
             {loading ? (
               <>

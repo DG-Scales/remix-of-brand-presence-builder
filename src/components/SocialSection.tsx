@@ -46,7 +46,7 @@ export default function SocialSection() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-primary font-medium text-sm tracking-widest uppercase">Follow Us</span>
+          <span className="text-accent font-medium text-sm tracking-widest uppercase">Follow Us</span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3 mb-4">
             Stay Connected
           </h2>
