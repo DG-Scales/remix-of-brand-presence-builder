@@ -16,7 +16,7 @@ const Reviews = () => {
               transition={{ duration: 0.6 }}
               className="space-y-8"
             >
-              <span className="text-primary font-medium text-sm tracking-widest uppercase">
+              <span className="text-accent font-medium text-sm tracking-widest uppercase">
                 Reviews
               </span>
               <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3">
