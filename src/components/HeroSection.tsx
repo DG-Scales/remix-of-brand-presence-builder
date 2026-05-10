@@ -29,10 +29,10 @@ export default function HeroSection() {
             Facebook & Meta Ads Agency
           </div>
 
-          <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-foreground">
+          <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] text-foreground">
             Scale Your
             <br />
-            <span className="text-primary">Revenue</span>
+            <span className="gradient-text">Revenue</span>
             <br />
             With Ads
           </h1>
@@ -44,7 +44,7 @@ export default function HeroSection() {
           <div className="flex flex-wrap gap-4">
             <Link
               to="/contact"
-              className="bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-base hover:opacity-90 transition-all hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5"
+              className="btn-primary-glow text-primary-foreground px-8 py-4 rounded-xl font-semibold text-base"
             >
               Get a Free Consultation
             </Link>
