@@ -54,6 +54,12 @@ export default function HeroSection() {
             >
               See How It Works
             </a>
+            <a
+              href="tel:+16174802895"
+              className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground border border-border px-8 py-4 rounded-xl font-semibold text-base hover:bg-secondary/80 transition-all hover:-translate-y-0.5"
+            >
+              <Phone className="w-4 h-4" /> Call (617) 480-2895
+            </a>
           </div>
 
           {/* Stats row */}
