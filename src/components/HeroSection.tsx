@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, TrendingUp, Target, BarChart3 } from "lucide-react";
+import { ArrowDown, TrendingUp, Target, BarChart3, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function HeroSection() {
