@@ -46,6 +46,9 @@ export default function Footer() {
           <div>
             <h4 className="font-heading font-semibold text-foreground mb-4">Get in Touch</h4>
             <p className="text-muted-foreground text-sm">dgsales.business@gmail.com</p>
+            <a href="tel:+16174802895" className="text-muted-foreground hover:text-foreground transition-colors text-sm block mt-2">
+              (617) 480-2895
+            </a>
             <p className="text-muted-foreground text-sm mt-2">Ready to scale? Let's talk ads.</p>
           </div>
         </div>
