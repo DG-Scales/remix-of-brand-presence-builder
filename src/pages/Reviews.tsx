@@ -35,7 +35,7 @@ const Reviews = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: star * 0.1 }}
                   >
-                    <Star className="w-10 h-10 text-yellow-400 fill-yellow-400" />
+                    <Star className="w-10 h-10 text-accent fill-[hsl(var(--accent))]" />
                   </motion.div>
                 ))}
               </div>
