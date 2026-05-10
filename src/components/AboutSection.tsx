@@ -63,7 +63,7 @@ function FounderCard({ founder, index }: { founder: typeof founders[0]; index: n
         </span>
       </div>
       <h3 className="font-heading text-2xl font-bold text-foreground mb-1">{founder.name}</h3>
-      <p className="text-primary font-medium text-sm mb-4">{founder.role}</p>
+      <p className="text-accent font-medium text-sm mb-4">{founder.role}</p>
       <p className="text-muted-foreground leading-relaxed">{founder.bio}</p>
     </motion.div>
   );
