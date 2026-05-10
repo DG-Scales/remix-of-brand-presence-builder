@@ -123,7 +123,7 @@ export default function AboutSection() {
 
         {/* Founders */}
         <div className="text-center mb-16">
-          <span className="text-primary font-medium text-sm tracking-widest uppercase">Who We Are</span>
+          <span className="text-accent font-medium text-sm tracking-widest uppercase">Who We Are</span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3">
             Meet the Founders
           </h2>
