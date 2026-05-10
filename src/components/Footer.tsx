@@ -1,13 +1,13 @@
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 const quickLinks = [
-  { label: "Home", href: "/", isRoute: true },
-  { label: "Services", href: "/#about", isRoute: true },
-  { label: "Contact", href: "/contact", isRoute: true },
-  { label: "Reviews", href: "/reviews", isRoute: true },
-  { label: "Socials", href: "/#socials", isRoute: true },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/#about" },
+  { label: "Contact", href: "/contact" },
+  { label: "Reviews", href: "/reviews" },
+  { label: "Socials", href: "/#socials" },
 ];
 
 export default function Footer() {
@@ -28,13 +28,14 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-semibold text-foreground mb-4">Quick Links</h4>
+            <span className="text-accent font-medium text-xs tracking-widest uppercase">Navigate</span>
+            <h4 className="font-heading font-semibold text-foreground mt-2 mb-4">Quick Links</h4>
             <div className="flex flex-col gap-2">
               {quickLinks.map((link) => (
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  className="text-muted-foreground hover:text-accent transition-colors text-sm w-fit"
                 >
                   {link.label}
                 </Link>
@@ -44,12 +45,28 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-heading font-semibold text-foreground mb-4">Get in Touch</h4>
-            <p className="text-muted-foreground text-sm">dgsales.business@gmail.com</p>
-            <a href="tel:+16174802895" className="text-muted-foreground hover:text-foreground transition-colors text-sm block mt-2">
+            <span className="text-accent font-medium text-xs tracking-widest uppercase">Contact</span>
+            <h4 className="font-heading font-semibold text-foreground mt-2 mb-4">Get in Touch</h4>
+            <a
+              href="mailto:dgsales.business@gmail.com"
+              className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors text-sm"
+            >
+              <Mail className="w-4 h-4 text-accent" />
+              dgsales.business@gmail.com
+            </a>
+            <a
+              href="tel:+16174802895"
+              className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors text-sm mt-2"
+            >
+              <Phone className="w-4 h-4 text-accent" />
               (617) 480-2895
             </a>
-            <p className="text-muted-foreground text-sm mt-2">Ready to scale? Let's talk ads.</p>
+            <Link
+              to="/contact"
+              className="btn-primary-glow inline-flex items-center justify-center text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold mt-5"
+            >
+              Start Your Project
+            </Link>
           </div>
         </div>
 
@@ -57,10 +74,10 @@ export default function Footer() {
           <p className="text-muted-foreground text-sm">&copy; {new Date().getFullYear()} DGScales. All rights reserved.</p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="mt-4 md:mt-0 p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors group"
+            className="btn-secondary-glow mt-4 md:mt-0 p-3 rounded-full group"
             aria-label="Back to top"
           >
-            <ArrowUp className="w-4 h-4 text-foreground group-hover:-translate-y-0.5 transition-transform" />
+            <ArrowUp className="w-4 h-4 text-accent group-hover:-translate-y-0.5 transition-transform" />
           </button>
         </div>
       </div>
