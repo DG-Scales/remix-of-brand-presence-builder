@@ -106,7 +106,7 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-medium text-sm tracking-widest uppercase">What We Do</span>
+          <span className="text-accent font-medium text-sm tracking-widest uppercase">What We Do</span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3">
             Ads That Actually Convert
           </h2>
