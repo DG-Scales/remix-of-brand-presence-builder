@@ -133,7 +133,7 @@ export default function Navbar() {
                 <Link
                   to="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold flex-1 text-center"
+                  className="btn-primary-glow text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold flex-1 text-center"
                 >
                   Get in Touch
                 </Link>
