@@ -29,10 +29,10 @@ export default function HeroSection() {
             Facebook & Meta Ads Agency
           </div>
 
-          <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-foreground">
+          <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] text-foreground">
             Scale Your
             <br />
-            <span className="text-primary">Revenue</span>
+            <span className="gradient-text">Revenue</span>
             <br />
             With Ads
           </h1>
@@ -44,7 +44,7 @@ export default function HeroSection() {
           <div className="flex flex-wrap gap-4">
             <Link
               to="/contact"
-              className="bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-base hover:opacity-90 transition-all hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5"
+              className="btn-primary-glow text-primary-foreground px-8 py-4 rounded-xl font-semibold text-base"
             >
               Get a Free Consultation
             </Link>
@@ -65,15 +65,15 @@ export default function HeroSection() {
           {/* Stats row */}
           <div className="flex flex-wrap gap-8 pt-4">
             <div className="flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-primary" />
+              <TrendingUp className="w-5 h-5 text-accent" />
               <span className="text-sm text-muted-foreground"><strong className="text-foreground">3x</strong> Avg. ROAS</span>
             </div>
             <div className="flex items-center gap-2">
-              <Target className="w-5 h-5 text-primary" />
+              <Target className="w-5 h-5 text-accent" />
               <span className="text-sm text-muted-foreground"><strong className="text-foreground">100+</strong> Campaigns</span>
             </div>
             <div className="flex items-center gap-2">
-              <BarChart3 className="w-5 h-5 text-primary" />
+              <BarChart3 className="w-5 h-5 text-accent" />
               <span className="text-sm text-muted-foreground"><strong className="text-foreground">$200K+</strong> Ad Spend Managed</span>
             </div>
           </div>
