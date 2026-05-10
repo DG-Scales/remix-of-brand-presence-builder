@@ -47,7 +47,7 @@ const Reviews = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-all hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5"
+                className="btn-primary-glow inline-flex items-center gap-3 text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg"
               >
                 <Star className="w-5 h-5" />
                 Leave a 5-Star Review on Google
