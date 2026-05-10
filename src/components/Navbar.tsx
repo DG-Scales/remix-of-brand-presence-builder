@@ -80,6 +80,12 @@ export default function Navbar() {
           >
             {dark ? <Sun className="w-4 h-4 text-foreground" /> : <Moon className="w-4 h-4 text-foreground" />}
           </button>
+          <a
+            href="tel:+16174802895"
+            className="text-foreground text-sm font-semibold hover:text-primary transition-colors"
+          >
+            (617) 480-2895
+          </a>
           <Link
             to="/contact"
             className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, TrendingUp, Target, BarChart3 } from "lucide-react";
+import { ArrowDown, TrendingUp, Target, BarChart3, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function HeroSection() {
@@ -53,6 +53,12 @@ export default function HeroSection() {
               className="bg-secondary text-secondary-foreground border border-border px-8 py-4 rounded-xl font-semibold text-base hover:bg-secondary/80 transition-all hover:-translate-y-0.5"
             >
               See How It Works
+            </a>
+            <a
+              href="tel:+16174802895"
+              className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground border border-border px-8 py-4 rounded-xl font-semibold text-base hover:bg-secondary/80 transition-all hover:-translate-y-0.5"
+            >
+              <Phone className="w-4 h-4" /> Call (617) 480-2895
             </a>
           </div>
 
