@@ -84,6 +84,15 @@ export default function ContactSection() {
           </div>
 
           <div className="space-y-4">
+            <a href="tel:+16174802895" className="glass-card p-5 flex items-center gap-4 hover:border-primary/40 transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                <Phone className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground">Phone</p>
+                <p className="text-foreground font-medium">(617) 480-2895</p>
+              </div>
+            </a>
             <div className="glass-card p-5 flex items-center gap-4">
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                 <Send className="w-5 h-5 text-primary" />
