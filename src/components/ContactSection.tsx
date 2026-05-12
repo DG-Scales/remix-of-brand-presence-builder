@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { Send, CheckCircle, AlertCircle, Loader2, Phone } from "lucide-react";
 import { toast } from "sonner";
@@ -7,9 +7,16 @@ import { supabase } from "@/integrations/supabase/client";
 export default function ContactSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const nameInputRef = useRef<HTMLInputElement>(null);
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    // Focus the form when the section mounts so visitors land on it directly
+    const t = setTimeout(() => nameInputRef.current?.focus({ preventScroll: false }), 300);
+    return () => clearTimeout(t);
+  }, []);
 
   const validate = () => {
     const errs: Record<string, string> = {};
@@ -63,13 +70,14 @@ export default function ContactSection() {
   return (
     <section id="contact" className="section-padding relative">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+        {/* Form first on mobile, left on desktop reorder handled below */}
         {/* Left info */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, x: -30 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="space-y-8"
+          className="space-y-8 order-2 lg:order-1"
         >
           <div>
             <span className="text-accent font-medium text-sm tracking-widest uppercase">Contact</span>
@@ -111,11 +119,12 @@ export default function ContactSection() {
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
           onSubmit={handleSubmit}
-          className="glass-card p-8 md:p-10 space-y-5"
+          className="glass-card p-8 md:p-10 space-y-5 order-1 lg:order-2"
         >
           <div className="grid sm:grid-cols-2 gap-5">
             <div>
               <input
+                ref={nameInputRef}
                 type="text"
                 placeholder="Your Name"
                 value={form.name}
