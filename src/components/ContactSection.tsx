@@ -124,6 +124,7 @@ export default function ContactSection() {
           <div className="grid sm:grid-cols-2 gap-5">
             <div>
               <input
+                ref={nameInputRef}
                 type="text"
                 placeholder="Your Name"
                 value={form.name}
