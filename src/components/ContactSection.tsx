@@ -63,6 +63,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="section-padding relative">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+        {/* Form first on mobile, left on desktop reorder handled below */}
         {/* Left info */}
         <motion.div
           ref={ref}
