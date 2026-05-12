@@ -70,7 +70,7 @@ export default function ContactSection() {
           initial={{ opacity: 0, x: -30 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="space-y-8"
+          className="space-y-8 order-2 lg:order-1"
         >
           <div>
             <span className="text-accent font-medium text-sm tracking-widest uppercase">Contact</span>
