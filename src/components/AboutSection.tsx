@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Megaphone, BarChart3, Target, Zap } from "lucide-react";
+import devanLabbeImg from "@/assets/devan-labbe.jpg";
 
 const founders = [
   {
@@ -9,12 +10,14 @@ const founders = [
     role: "Co-Founder — Operations, Finance & Strategy",
     bio: "Founder of DG Scales, overseeing the creative direction, strategy, and day-to-day operations behind the scenes. Focused on building impactful marketing campaigns, managing client growth, and ensuring every project runs smoothly from concept to execution.",
     icon: Megaphone,
+    image: null as string | null,
   },
   {
     name: "Devan Labbe",
     role: "Co-Founder — Client Relations, Sales & Creatives",
     bio: "Responsible for closing clients, leading collaborations, and customizing creatives and ad campaigns. Works hand-in-hand with every client — checking in regularly and staying on top of their needs and goals to ensure ads deliver real results.",
     icon: Zap,
+    image: devanLabbeImg,
   },
 ];
 
@@ -57,11 +60,17 @@ function FounderCard({ founder, index }: { founder: typeof founders[0]; index: n
       <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
         <Icon className="w-7 h-7 text-primary" />
       </div>
-      <div className="w-20 h-20 rounded-full bg-secondary mb-6 flex items-center justify-center">
-        <span className="font-heading text-2xl font-bold text-muted-foreground">
-          {founder.name.split(" ").map(w => w[0]).join("")}
-        </span>
-      </div>
+      {founder.image ? (
+        <div className="w-20 h-20 rounded-full overflow-hidden mb-6 border border-border">
+          <img src={founder.image} alt={founder.name} className="w-full h-full object-cover" />
+        </div>
+      ) : (
+        <div className="w-20 h-20 rounded-full bg-secondary mb-6 flex items-center justify-center">
+          <span className="font-heading text-2xl font-bold text-muted-foreground">
+            {founder.name.split(" ").map(w => w[0]).join("")}
+          </span>
+        </div>
+      )}
       <h3 className="font-heading text-2xl font-bold text-foreground mb-1">{founder.name}</h3>
       <p className="text-accent font-medium text-sm mb-4">{founder.role}</p>
       <p className="text-muted-foreground leading-relaxed">{founder.bio}</p>
