@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { Send, CheckCircle, AlertCircle, Loader2, Phone } from "lucide-react";
 import { toast } from "sonner";
@@ -7,9 +7,16 @@ import { supabase } from "@/integrations/supabase/client";
 export default function ContactSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const nameInputRef = useRef<HTMLInputElement>(null);
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    // Focus the form when the section mounts so visitors land on it directly
+    const t = setTimeout(() => nameInputRef.current?.focus({ preventScroll: false }), 300);
+    return () => clearTimeout(t);
+  }, []);
 
   const validate = () => {
     const errs: Record<string, string> = {};
