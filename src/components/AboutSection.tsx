@@ -61,12 +61,12 @@ function FounderCard({ founder, index }: { founder: typeof founders[0]; index: n
         <Icon className="w-7 h-7 text-primary" />
       </div>
       {founder.image ? (
-        <div className="w-20 h-20 rounded-full overflow-hidden mb-6 border border-border">
+        <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden mb-6 border-2 border-accent/30 shadow-lg">
           <img src={founder.image} alt={founder.name} className="w-full h-full object-cover" />
         </div>
       ) : (
-        <div className="w-20 h-20 rounded-full bg-secondary mb-6 flex items-center justify-center">
-          <span className="font-heading text-2xl font-bold text-muted-foreground">
+        <div className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-secondary mb-6 flex items-center justify-center border-2 border-accent/30">
+          <span className="font-heading text-5xl font-bold text-muted-foreground">
             {founder.name.split(" ").map(w => w[0]).join("")}
           </span>
         </div>

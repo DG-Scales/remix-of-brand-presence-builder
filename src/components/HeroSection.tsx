@@ -1,8 +1,21 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowDown, TrendingUp, Target, BarChart3, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import devanLabbeImg from "@/assets/devan-labbe.jpg";
+
+const founderSlides = [
+  { type: "image" as const, src: devanLabbeImg, alt: "Devan Labbe", name: "Devan Labbe" },
+  { type: "initials" as const, initials: "GM", name: "Giancarlos Minyetti" },
+];
 
 export default function HeroSection() {
+  const [slideIndex, setSlideIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setSlideIndex(i => (i + 1) % founderSlides.length), 3500);
+    return () => clearInterval(id);
+  }, []);
+  const slide = founderSlides[slideIndex];
   return (
     <section
       id="home"
@@ -87,8 +100,26 @@ export default function HeroSection() {
           className="hidden lg:flex justify-center"
         >
           <div className="relative">
-            <div className="w-80 h-80 rounded-3xl bg-primary/10 border border-primary/20 flex items-center justify-center animate-float">
-              <span className="font-heading text-7xl font-bold text-primary/30">DGS</span>
+            <div className="w-80 h-80 rounded-3xl bg-primary/10 border border-primary/20 overflow-hidden animate-float relative">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={slideIndex}
+                  initial={{ opacity: 0, scale: 1.05 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.98 }}
+                  transition={{ duration: 1.2, ease: "easeInOut" }}
+                  className="absolute inset-0 flex items-center justify-center"
+                >
+                  {slide.type === "image" ? (
+                    <img src={slide.src} alt={slide.alt} className="w-full h-full object-cover" />
+                  ) : (
+                    <span className="font-heading text-8xl font-bold text-primary/40">{slide.initials}</span>
+                  )}
+                </motion.div>
+              </AnimatePresence>
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-background/70 backdrop-blur-sm border border-border">
+                <span className="text-xs font-medium text-foreground">{slide.name}</span>
+              </div>
             </div>
             <div className="absolute -top-6 -right-6 w-24 h-24 rounded-2xl bg-primary/20 animate-float flex items-center justify-center" style={{ animationDelay: "1s" }}>
               <TrendingUp className="w-10 h-10 text-primary/40" />
