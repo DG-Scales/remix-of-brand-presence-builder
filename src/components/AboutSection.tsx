@@ -6,18 +6,18 @@ import devanLabbeImg from "@/assets/devan-labbe.jpg";
 
 const founders = [
   {
-    name: "Giancarlos Minyetti",
-    role: "Co-Founder — Operations, Finance & Strategy",
-    bio: "Founder of DG Scales, overseeing the creative direction, strategy, and day-to-day operations behind the scenes. Focused on building impactful marketing campaigns, managing client growth, and ensuring every project runs smoothly from concept to execution.",
-    icon: Megaphone,
-    image: null as string | null,
-  },
-  {
     name: "Devan Labbe",
     role: "Co-Founder — Client Relations, Sales & Creatives",
     bio: "Responsible for closing clients, leading collaborations, and customizing creatives and ad campaigns. Works hand-in-hand with every client — checking in regularly and staying on top of their needs and goals to ensure ads deliver real results.",
     icon: Zap,
     image: devanLabbeImg,
+  },
+  {
+    name: "Giancarlos Minyetti",
+    role: "Co-Founder — Operations, Finance & Strategy",
+    bio: "Founder of DG Scales, overseeing the creative direction, strategy, and day-to-day operations behind the scenes. Focused on building impactful marketing campaigns, managing client growth, and ensuring every project runs smoothly from concept to execution.",
+    icon: Megaphone,
+    image: null as string | null,
   },
 ];
 
