@@ -112,7 +112,7 @@ export default function ContactSection() {
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
           onSubmit={handleSubmit}
-          className="glass-card p-8 md:p-10 space-y-5"
+          className="glass-card p-8 md:p-10 space-y-5 order-1 lg:order-2"
         >
           <div className="grid sm:grid-cols-2 gap-5">
             <div>
