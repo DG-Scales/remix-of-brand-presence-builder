@@ -1,8 +1,21 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowDown, TrendingUp, Target, BarChart3, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import devanLabbeImg from "@/assets/devan-labbe.jpg";
+
+const founderSlides = [
+  { type: "image" as const, src: devanLabbeImg, alt: "Devan Labbe", name: "Devan Labbe" },
+  { type: "initials" as const, initials: "GM", name: "Giancarlos Minyetti" },
+];
 
 export default function HeroSection() {
+  const [slideIndex, setSlideIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setSlideIndex(i => (i + 1) % founderSlides.length), 3500);
+    return () => clearInterval(id);
+  }, []);
+  const slide = founderSlides[slideIndex];
   return (
     <section
       id="home"
