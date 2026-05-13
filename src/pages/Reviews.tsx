@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { Star, ExternalLink } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -6,6 +7,15 @@ import Footer from "@/components/Footer";
 const Reviews = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Reviews — What Clients Say About DG Scales</title>
+        <meta name="description" content="Read reviews from DG Scales clients and leave your own 5-star Google review for our Facebook & Instagram ads agency." />
+        <link rel="canonical" href="https://dgscales.lovable.app/reviews" />
+        <meta property="og:title" content="Reviews — What Clients Say About DG Scales" />
+        <meta property="og:description" content="See what DG Scales clients say and leave a 5-star review on Google." />
+        <meta property="og:url" content="https://dgscales.lovable.app/reviews" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Navbar />
       <div className="pt-24">
         <section className="section-padding">
@@ -20,7 +30,7 @@ const Reviews = () => {
                 Reviews
               </span>
               <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3">
-                Love Working With Us?
+                Leave a Review for DG Scales
               </h1>
               <p className="text-muted-foreground text-lg max-w-xl mx-auto leading-relaxed">
                 We'd love to hear about your experience! Leave us a 5-star review on Google — it helps us grow and helps other businesses find us.

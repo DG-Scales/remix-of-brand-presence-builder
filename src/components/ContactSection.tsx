@@ -92,11 +92,11 @@ export default function ContactSection() {
         >
           <div>
             <span className="text-accent font-medium text-sm tracking-widest uppercase">Contact</span>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3">
+            <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3">
               Let's Scale
               <br />
               Your Ads
-            </h2>
+            </h1>
             <p className="text-muted-foreground text-lg mt-4 max-w-md leading-relaxed">
               Ready to scale your business with Facebook ads? Fill out the form and we'll get back to you within 24 hours with a free strategy call.
             </p>
@@ -134,10 +134,13 @@ export default function ContactSection() {
         >
           <div className="grid sm:grid-cols-2 gap-5">
             <div>
+              <label htmlFor="contact-name" className="sr-only">Your Name</label>
               <input
+                id="contact-name"
                 ref={nameInputRef}
                 type="text"
                 placeholder="Your Name"
+                aria-label="Your Name"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 className={inputClass("name")}
@@ -149,9 +152,12 @@ export default function ContactSection() {
               )}
             </div>
             <div>
+              <label htmlFor="contact-email" className="sr-only">Your Email</label>
               <input
+                id="contact-email"
                 type="email"
                 placeholder="Your Email"
+                aria-label="Your Email"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 className={inputClass("email")}
@@ -164,9 +170,12 @@ export default function ContactSection() {
             </div>
           </div>
           <div>
+            <label htmlFor="contact-subject" className="sr-only">Subject</label>
             <input
+              id="contact-subject"
               type="text"
               placeholder="Subject"
+              aria-label="Subject"
               value={form.subject}
               onChange={(e) => setForm({ ...form, subject: e.target.value })}
               className={inputClass("subject")}
@@ -178,8 +187,11 @@ export default function ContactSection() {
             )}
           </div>
           <div>
+            <label htmlFor="contact-message" className="sr-only">Message</label>
             <textarea
+              id="contact-message"
               placeholder="Tell us about your business and goals..."
+              aria-label="Message"
               rows={5}
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
