@@ -80,7 +80,14 @@ function FounderCard({ founder, index }: { founder: typeof founders[0]; index: n
       )}
       <h3 className="font-heading text-2xl font-bold text-foreground mb-1">{founder.name}</h3>
       <p className="text-accent font-medium text-sm mb-4">{founder.role}</p>
-      <p className="text-muted-foreground leading-relaxed">{founder.bio}</p>
+      <p className="text-muted-foreground leading-relaxed mb-5">{founder.bio}</p>
+      <ul className="flex flex-wrap gap-2">
+        {founder.highlights.map((h) => (
+          <li key={h} className="text-xs font-medium text-foreground bg-secondary/60 border border-border px-3 py-1.5 rounded-full">
+            {h}
+          </li>
+        ))}
+      </ul>
     </motion.div>
   );
 }
