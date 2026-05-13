@@ -1,26 +1,23 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/#about" },
+  { label: "Process", href: "/#process" },
+  { label: "Results", href: "/#results" },
+  { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/contact" },
   { label: "Reviews", href: "/reviews" },
-  { label: "Socials", href: "/#socials" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [dark, setDark] = useState(true);
   const location = useLocation();
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", dark);
-  }, [dark]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
