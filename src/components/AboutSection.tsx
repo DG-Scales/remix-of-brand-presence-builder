@@ -9,14 +9,16 @@ const founders = [
   {
     name: "Devan Labbe",
     role: "Co-Founder — Client Relations, Sales & Creatives",
-    bio: "Responsible for closing clients, leading collaborations, and customizing creatives and ad campaigns. Works hand-in-hand with every client — checking in regularly and staying on top of their needs and goals to ensure ads deliver real results.",
+    bio: "Devan leads client acquisition, partnerships, and the creative side of every campaign. He personally onboards each client, directs the ad creative, and stays in constant communication so messaging, offers, and visuals are dialed in. Known for closing high-ticket deals and turning cold prospects into long-term partners — he treats every account like it's his own business.",
+    highlights: ["Client onboarding & strategy", "Creative direction", "Sales & partnerships"],
     icon: Zap,
     image: devanLabbeImg,
   },
   {
     name: "Giancarlos Minyetti",
     role: "Co-Founder — Operations, Finance & Strategy",
-    bio: "Founder of DG Scales, overseeing the creative direction, strategy, and day-to-day operations behind the scenes. Focused on building impactful marketing campaigns, managing client growth, and ensuring every project runs smoothly from concept to execution.",
+    bio: "Giancarlos founded DG Scales and runs the strategic engine behind it. He oversees campaign architecture, budget allocation, performance optimization, and the daily execution that keeps client accounts profitable. With a focus on scaling ad spend efficiently, he turns data into decisions that drive consistent ROI across every account we manage.",
+    highlights: ["Media buying & scaling", "Performance optimization", "Operations & reporting"],
     icon: Megaphone,
     image: giancarlosImg,
   },
@@ -25,22 +27,26 @@ const founders = [
 const services = [
   {
     title: "Facebook & Instagram Ads",
-    description: "Full-funnel ad campaigns optimized for conversions, leads, and sales across Meta platforms.",
+    description: "Full-funnel Meta campaigns engineered for conversions — from cold awareness to retargeting and retention. We build, launch, and optimize daily.",
+    deliverables: ["Campaign build & launch", "Daily optimization", "A/B testing framework"],
     icon: Megaphone,
   },
   {
     title: "Audience Targeting",
-    description: "Precision targeting using custom audiences, lookalikes, and interest-based strategies to reach your ideal customer.",
+    description: "Custom audiences, lookalikes, and interest stacks built from your customer data so every dollar reaches buyers most likely to convert.",
+    deliverables: ["Custom & lookalike audiences", "Interest research", "Pixel & CAPI setup"],
     icon: Target,
   },
   {
     title: "Performance Analytics",
-    description: "Transparent reporting and real-time dashboards so you always know exactly how your ads are performing.",
+    description: "Transparent reporting with real-time dashboards. You always know your ROAS, CPA, CTR, and exactly where every dollar of ad spend is going.",
+    deliverables: ["Live KPI dashboard", "Weekly performance reports", "Attribution tracking"],
     icon: BarChart3,
   },
   {
     title: "Creative & Copywriting",
-    description: "Thumb-stopping creatives and persuasive ad copy designed to maximize your click-through and conversion rates.",
+    description: "Thumb-stopping static, video, and UGC-style creative paired with conversion-focused copy. New creative tested every week to fight ad fatigue.",
+    deliverables: ["Static & video ads", "Hook & angle testing", "Conversion copywriting"],
     icon: Zap,
   },
 ];
@@ -74,7 +80,14 @@ function FounderCard({ founder, index }: { founder: typeof founders[0]; index: n
       )}
       <h3 className="font-heading text-2xl font-bold text-foreground mb-1">{founder.name}</h3>
       <p className="text-accent font-medium text-sm mb-4">{founder.role}</p>
-      <p className="text-muted-foreground leading-relaxed">{founder.bio}</p>
+      <p className="text-muted-foreground leading-relaxed mb-5">{founder.bio}</p>
+      <ul className="flex flex-wrap gap-2">
+        {founder.highlights.map((h) => (
+          <li key={h} className="text-xs font-medium text-foreground bg-secondary/60 border border-border px-3 py-1.5 rounded-full">
+            {h}
+          </li>
+        ))}
+      </ul>
     </motion.div>
   );
 }
@@ -96,7 +109,15 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
         <Icon className="w-6 h-6 text-primary" />
       </div>
       <h3 className="font-heading text-lg font-bold text-foreground mb-2">{service.title}</h3>
-      <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
+      <p className="text-muted-foreground text-sm leading-relaxed mb-4">{service.description}</p>
+      <ul className="space-y-1.5">
+        {service.deliverables.map((d) => (
+          <li key={d} className="text-xs text-muted-foreground flex items-start gap-2">
+            <span className="mt-1.5 w-1 h-1 rounded-full bg-accent shrink-0" />
+            <span>{d}</span>
+          </li>
+        ))}
+      </ul>
     </motion.div>
   );
 }
