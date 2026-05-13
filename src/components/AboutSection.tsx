@@ -18,7 +18,7 @@ const founders = [
     role: "Co-Founder — Operations, Finance & Strategy",
     bio: "Founder of DG Scales, overseeing the creative direction, strategy, and day-to-day operations behind the scenes. Focused on building impactful marketing campaigns, managing client growth, and ensuring every project runs smoothly from concept to execution.",
     icon: Megaphone,
-    image: null as string | null,
+    image: giancarlosImg,
   },
 ];
 
