@@ -70,13 +70,6 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <button
-            onClick={() => setDark(!dark)}
-            className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
-            aria-label="Toggle theme"
-          >
-            {dark ? <Sun className="w-4 h-4 text-foreground" /> : <Moon className="w-4 h-4 text-foreground" />}
-          </button>
           <a
             href="tel:+16174802895"
             className="text-foreground text-sm font-semibold hover:text-primary transition-colors"
