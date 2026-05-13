@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowDown, TrendingUp, Target, BarChart3, Phone } from "lucide-react";
+import { ArrowDown, TrendingUp, Target, BarChart3, Phone, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import devanLabbeImg from "@/assets/devan-labbe.jpg";
