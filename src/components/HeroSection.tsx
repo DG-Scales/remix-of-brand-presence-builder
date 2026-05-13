@@ -3,10 +3,11 @@ import { ArrowDown, TrendingUp, Target, BarChart3, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import devanLabbeImg from "@/assets/devan-labbe.jpg";
+import giancarlosImg from "@/assets/giancarlos-minyetti.jpg";
 
 const founderSlides = [
   { type: "image" as const, src: devanLabbeImg, alt: "Devan Labbe", name: "Devan Labbe" },
-  { type: "initials" as const, initials: "GM", name: "Giancarlos Minyetti" },
+  { type: "image" as const, src: giancarlosImg, alt: "Giancarlos Minyetti", name: "Giancarlos Minyetti" },
 ];
 
 export default function HeroSection() {
@@ -110,11 +111,7 @@ export default function HeroSection() {
                   transition={{ duration: 1.2, ease: "easeInOut" }}
                   className="absolute inset-0 flex items-center justify-center"
                 >
-                  {slide.type === "image" ? (
-                    <img src={slide.src} alt={slide.alt} className="w-full h-full object-cover" />
-                  ) : (
-                    <span className="font-heading text-8xl font-bold text-primary/40">{slide.initials}</span>
-                  )}
+                  <img src={slide.src} alt={slide.alt} className="w-full h-full object-cover" />
                 </motion.div>
               </AnimatePresence>
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-background/70 backdrop-blur-sm border border-border">

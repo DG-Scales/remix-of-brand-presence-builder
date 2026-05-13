@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Megaphone, BarChart3, Target, Zap } from "lucide-react";
 import devanLabbeImg from "@/assets/devan-labbe.jpg";
+import giancarlosImg from "@/assets/giancarlos-minyetti.jpg";
 
 const founders = [
   {
@@ -17,7 +18,7 @@ const founders = [
     role: "Co-Founder — Operations, Finance & Strategy",
     bio: "Founder of DG Scales, overseeing the creative direction, strategy, and day-to-day operations behind the scenes. Focused on building impactful marketing campaigns, managing client growth, and ensuring every project runs smoothly from concept to execution.",
     icon: Megaphone,
-    image: null as string | null,
+    image: giancarlosImg,
   },
 ];
 
