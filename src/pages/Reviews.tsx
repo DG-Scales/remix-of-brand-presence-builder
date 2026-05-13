@@ -41,7 +41,7 @@ const Reviews = () => {
               </div>
 
               <motion.a
-                href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK/review"
+                href="https://g.page/r/CW445wl7HydyEAI/review"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
