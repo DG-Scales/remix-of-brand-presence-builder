@@ -49,13 +49,13 @@ const Reviews = () => {
                 transition={{ duration: 0.5, delay: 0.6 }}
                 className="btn-primary-glow inline-flex items-center gap-3 text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg"
               >
-                <Star className="w-5 h-5" />
-                Leave a 5-Star Review on Google
+                <Star className="w-5 h-5 fill-current" />
+                Click 5 Stars ⭐⭐⭐⭐⭐ on Google
                 <ExternalLink className="w-5 h-5" />
               </motion.a>
 
               <p className="text-muted-foreground text-sm">
-                You'll be redirected to Google to leave your review.
+                You'll be redirected to Google — just tap the 5th star and submit. Thank you!
               </p>
             </motion.div>
           </div>
