@@ -12,10 +12,6 @@ const faqs = [
     a: "Most clients see initial conversions within the first 7–14 days. Profitable, predictable performance usually stabilizes by day 30–45 once we've finished the testing phase and identified winning creative + audiences.",
   },
   {
-    q: "Do you require long-term contracts?",
-    a: "No. We work month-to-month because we believe in earning your business with results, not locking you in. Most clients stay 6+ months because the numbers keep working.",
-  },
-  {
     q: "What industries do you work with?",
     a: "We specialize in e-commerce/DTC, local service businesses, coaches, and high-ticket offers. If you have a proven offer and clear margins, we can almost certainly help you scale it.",
   },
