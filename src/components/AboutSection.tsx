@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Megaphone, BarChart3, Target, Zap } from "lucide-react";
 import devanLabbeImg from "@/assets/devan-labbe.jpg";
+import giancarlosImg from "@/assets/giancarlos-minyetti.jpg";
 
 const founders = [
   {
