@@ -109,7 +109,15 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
         <Icon className="w-6 h-6 text-primary" />
       </div>
       <h3 className="font-heading text-lg font-bold text-foreground mb-2">{service.title}</h3>
-      <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
+      <p className="text-muted-foreground text-sm leading-relaxed mb-4">{service.description}</p>
+      <ul className="space-y-1.5">
+        {service.deliverables.map((d) => (
+          <li key={d} className="text-xs text-muted-foreground flex items-start gap-2">
+            <span className="mt-1.5 w-1 h-1 rounded-full bg-accent shrink-0" />
+            <span>{d}</span>
+          </li>
+        ))}
+      </ul>
     </motion.div>
   );
 }
