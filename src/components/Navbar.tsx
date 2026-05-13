@@ -113,13 +113,6 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="flex items-center gap-3 pt-2">
-                <button
-                  onClick={() => setDark(!dark)}
-                  className="p-2 rounded-full bg-secondary"
-                  aria-label="Toggle theme"
-                >
-                  {dark ? <Sun className="w-4 h-4 text-foreground" /> : <Moon className="w-4 h-4 text-foreground" />}
-                </button>
                 <Link
                   to="/contact"
                   onClick={() => setMobileOpen(false)}
