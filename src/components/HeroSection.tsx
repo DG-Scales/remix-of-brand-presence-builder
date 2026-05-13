@@ -52,8 +52,14 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-muted-foreground text-lg md:text-xl max-w-lg leading-relaxed">
-            We run high-performing Facebook & Instagram ad campaigns that drive real results. More leads, more sales, more growth — guaranteed.
+            We run high-performing Facebook & Instagram ad campaigns built to drive real revenue — more leads, more sales, more growth. Transparent reporting, daily optimization, no long-term contracts.
           </p>
+
+          <div className="flex flex-wrap gap-3 text-xs">
+            <span className="px-3 py-1.5 rounded-full bg-secondary/60 border border-border text-foreground font-medium">No long-term contracts</span>
+            <span className="px-3 py-1.5 rounded-full bg-secondary/60 border border-border text-foreground font-medium">Weekly reporting</span>
+            <span className="px-3 py-1.5 rounded-full bg-secondary/60 border border-border text-foreground font-medium">Founder-led accounts</span>
+          </div>
 
           <div className="flex flex-wrap gap-4">
             <Link
