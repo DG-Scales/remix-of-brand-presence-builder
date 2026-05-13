@@ -9,14 +9,16 @@ const founders = [
   {
     name: "Devan Labbe",
     role: "Co-Founder — Client Relations, Sales & Creatives",
-    bio: "Responsible for closing clients, leading collaborations, and customizing creatives and ad campaigns. Works hand-in-hand with every client — checking in regularly and staying on top of their needs and goals to ensure ads deliver real results.",
+    bio: "Devan leads client acquisition, partnerships, and the creative side of every campaign. He personally onboards each client, directs the ad creative, and stays in constant communication so messaging, offers, and visuals are dialed in. Known for closing high-ticket deals and turning cold prospects into long-term partners — he treats every account like it's his own business.",
+    highlights: ["Client onboarding & strategy", "Creative direction", "Sales & partnerships"],
     icon: Zap,
     image: devanLabbeImg,
   },
   {
     name: "Giancarlos Minyetti",
     role: "Co-Founder — Operations, Finance & Strategy",
-    bio: "Founder of DG Scales, overseeing the creative direction, strategy, and day-to-day operations behind the scenes. Focused on building impactful marketing campaigns, managing client growth, and ensuring every project runs smoothly from concept to execution.",
+    bio: "Giancarlos founded DG Scales and runs the strategic engine behind it. He oversees campaign architecture, budget allocation, performance optimization, and the daily execution that keeps client accounts profitable. With a focus on scaling ad spend efficiently, he turns data into decisions that drive consistent ROI across every account we manage.",
+    highlights: ["Media buying & scaling", "Performance optimization", "Operations & reporting"],
     icon: Megaphone,
     image: giancarlosImg,
   },
@@ -25,22 +27,26 @@ const founders = [
 const services = [
   {
     title: "Facebook & Instagram Ads",
-    description: "Full-funnel ad campaigns optimized for conversions, leads, and sales across Meta platforms.",
+    description: "Full-funnel Meta campaigns engineered for conversions — from cold awareness to retargeting and retention. We build, launch, and optimize daily.",
+    deliverables: ["Campaign build & launch", "Daily optimization", "A/B testing framework"],
     icon: Megaphone,
   },
   {
     title: "Audience Targeting",
-    description: "Precision targeting using custom audiences, lookalikes, and interest-based strategies to reach your ideal customer.",
+    description: "Custom audiences, lookalikes, and interest stacks built from your customer data so every dollar reaches buyers most likely to convert.",
+    deliverables: ["Custom & lookalike audiences", "Interest research", "Pixel & CAPI setup"],
     icon: Target,
   },
   {
     title: "Performance Analytics",
-    description: "Transparent reporting and real-time dashboards so you always know exactly how your ads are performing.",
+    description: "Transparent reporting with real-time dashboards. You always know your ROAS, CPA, CTR, and exactly where every dollar of ad spend is going.",
+    deliverables: ["Live KPI dashboard", "Weekly performance reports", "Attribution tracking"],
     icon: BarChart3,
   },
   {
     title: "Creative & Copywriting",
-    description: "Thumb-stopping creatives and persuasive ad copy designed to maximize your click-through and conversion rates.",
+    description: "Thumb-stopping static, video, and UGC-style creative paired with conversion-focused copy. New creative tested every week to fight ad fatigue.",
+    deliverables: ["Static & video ads", "Hook & angle testing", "Conversion copywriting"],
     icon: Zap,
   },
 ];
