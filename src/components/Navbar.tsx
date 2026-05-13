@@ -55,7 +55,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="DG Logo" className="h-10 w-auto rounded" />
+          <img src={logo} alt="DG Scales Logo" className="h-10 w-auto rounded" />
           <span className="font-heading font-bold text-xl text-foreground">DG Scales</span>
         </Link>
 
