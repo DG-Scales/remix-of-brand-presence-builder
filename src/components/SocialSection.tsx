@@ -30,7 +30,7 @@ const TikTokIcon = () => (
 const socials = [
   { name: "dg_scales Instagram", icon: InstagramIcon, url: "https://www.instagram.com/dg_scales/", color: "hover:text-pink-500" },
   { name: "DG Scales Facebook", icon: FacebookIcon, url: "https://www.facebook.com/profile.php?id=61573364082257", color: "hover:text-blue-500" },
-  { name: "Devan Labbe TikTok", icon: TikTokIcon, url: "https://www.tiktok.com/@devan_labbe?_r=1&_t=ZP-96IiUtV6Au7", color: "hover:text-cyan-400" },
+  { name: "DG Scales Tiktok", icon: TikTokIcon, url: "https://www.tiktok.com/@devan_labbe?_r=1&_t=ZP-96IiUtV6Au7", color: "hover:text-cyan-400" },
 ];
 
 export default function SocialSection() {
