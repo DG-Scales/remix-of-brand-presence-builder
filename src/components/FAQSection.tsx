@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const faqs = [
@@ -31,6 +32,17 @@ export default function FAQSection() {
 
   return (
     <section id="faq" className="section-padding bg-secondary/30 relative">
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        })}</script>
+      </Helmet>
       <div className="max-w-4xl mx-auto">
         <motion.div
           ref={ref}
