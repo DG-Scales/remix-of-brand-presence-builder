@@ -67,12 +67,12 @@ export default function HeroSection() {
             >
               Get a Free Consultation
             </Link>
-            <a
-              href="#about"
-              className="btn-secondary-glow px-8 py-4 rounded-xl font-semibold text-base"
+            <Link
+              to="/reviews"
+              className="btn-secondary-glow inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-base"
             >
-              See How It Works
-            </a>
+              <Star className="w-4 h-4 fill-current text-accent" /> Leave a 5-Star Review
+            </Link>
             <a
               href="tel:+16174802895"
               className="btn-secondary-glow inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-base"
