@@ -36,12 +36,23 @@ export default function ContactSection() {
     setLoading(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+      const id = crypto.randomUUID();
+      const payload = {
+        name: form.name.trim(),
+        email: form.email.trim(),
+        subject: form.subject.trim(),
+        message: form.message.trim(),
+      };
+
+      // Save to database (best-effort — don't block email on this)
+      await supabase.from('contact_submissions').insert({ ...payload, id });
+
+      // Send the lead notification straight to the business inbox
+      const { error } = await supabase.functions.invoke('send-transactional-email', {
         body: {
-          name: form.name.trim(),
-          email: form.email.trim(),
-          subject: form.subject.trim(),
-          message: form.message.trim(),
+          templateName: 'contact-form-notification',
+          idempotencyKey: `contact-notify-${id}`,
+          templateData: payload,
         },
       });
 
