@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowDown, TrendingUp, Target, BarChart3, Phone } from "lucide-react";
+import { ArrowDown, TrendingUp, Target, BarChart3, Phone, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import devanLabbeImg from "@/assets/devan-labbe.jpg";
@@ -67,12 +67,12 @@ export default function HeroSection() {
             >
               Get a Free Consultation
             </Link>
-            <a
-              href="#about"
-              className="btn-secondary-glow px-8 py-4 rounded-xl font-semibold text-base"
+            <Link
+              to="/reviews"
+              className="btn-secondary-glow inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-base"
             >
-              See How It Works
-            </a>
+              <Star className="w-4 h-4 fill-current text-accent" /> Leave a 5-Star Review
+            </Link>
             <a
               href="tel:+16174802895"
               className="btn-secondary-glow inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-base"
