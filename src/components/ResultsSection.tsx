@@ -11,19 +11,19 @@ const stats = [
 
 const testimonials = [
   {
-    quote: "DG Scales took our Meta ads from breakeven to a consistent 4x ROAS in under 60 days. The creative they produce is on another level.",
-    name: "E-commerce Brand Owner",
-    role: "DTC Apparel",
+    quote: "DG Scales filled our calendar with qualified patio and outdoor living leads in under 30 days. Best season we've ever had.",
+    name: "Hardscaping Contractor",
+    role: "Patios & Outdoor Living",
   },
   {
-    quote: "Communication is unmatched. Devan checks in constantly, and Giancarlos's strategy completely changed how we think about scaling spend.",
-    name: "Local Service Business",
-    role: "Home Services",
+    quote: "We went from chasing referrals to booking estimates every week. Their ads bring in serious homeowners ready to spend.",
+    name: "Construction Company Owner",
+    role: "Residential Remodeling",
   },
   {
-    quote: "We tried three agencies before DG Scales. They were the first to actually understand our offer and deliver leads that closed.",
-    name: "Coaching Client",
-    role: "High-Ticket Coach",
+    quote: "Devan and Giancarlos understand the trades. The leads are real, the creative looks premium, and our close rate jumped.",
+    name: "Landscape & Hardscape Pro",
+    role: "Driveways & Retaining Walls",
   },
 ];
 
