@@ -13,7 +13,7 @@ const founderSlides = [
 export default function HeroSection() {
   const [slideIndex, setSlideIndex] = useState(0);
   useEffect(() => {
-    const id = setInterval(() => setSlideIndex(i => (i + 1) % founderSlides.length), 3500);
+    const id = setInterval(() => setSlideIndex(i => (i + 1) % founderSlides.length), 7000);
     return () => clearInterval(id);
   }, []);
   const slide = founderSlides[slideIndex];
