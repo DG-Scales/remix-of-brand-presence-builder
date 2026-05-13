@@ -13,11 +13,11 @@ const faqs = [
   },
   {
     q: "What industries do you work with?",
-    a: "We specialize in e-commerce/DTC, local service businesses, coaches, and high-ticket offers. If you have a proven offer and clear margins, we can almost certainly help you scale it.",
+    a: "We specialize in construction, hardscaping, landscaping, and home improvement businesses — but we also work with e-commerce brands, local service companies, coaches, and high-ticket offers. If you have a proven offer and clear margins, we can help you scale it.",
   },
   {
     q: "Who creates the ad creative?",
-    a: "We do. Our team produces static images, short-form video, and UGC-style ads in-house. You can also send us existing brand assets and we'll adapt them for performance.",
+    a: "You supply us with high-quality photos and videos of your work, and our team turns them into scroll-stopping ads — static images, short-form video, and UGC-style creative built for performance.",
   },
   {
     q: "How do I know my ads are actually working?",
