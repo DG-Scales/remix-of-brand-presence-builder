@@ -18,8 +18,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img src={logo} alt="DGScales Logo" className="h-10 w-auto rounded" />
-              <span className="font-heading font-bold text-xl text-foreground">DGScales</span>
+              <img src={logo} alt="DG Scales Logo" className="h-10 w-auto rounded" />
+              <span className="font-heading font-bold text-xl text-foreground">DG Scales</span>
             </div>
             <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
               Your growth partner for high-performing Facebook & Instagram ad campaigns that deliver real results.
@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between mt-12 pt-8 border-t border-border">
-          <p className="text-muted-foreground text-sm">&copy; {new Date().getFullYear()} DGScales. All rights reserved.</p>
+          <p className="text-muted-foreground text-sm">&copy; {new Date().getFullYear()} DG Scales. All rights reserved.</p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="btn-secondary-glow mt-4 md:mt-0 p-3 rounded-full group"
