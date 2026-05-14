@@ -8,7 +8,7 @@ import giancarlosImg from "@/assets/giancarlos-minyetti.jpg";
 const founders = [
   {
     name: "Devan Labbe",
-    role: "Co-Founder — Client Relations, Sales & Creatives",
+    role: "Founder — Client Relations, Sales & Creatives",
     bio: "Devan leads client acquisition, partnerships, and the creative side of every campaign. He personally onboards each client, directs the ad creative, and stays in constant communication so messaging, offers, and visuals are dialed in. Known for closing high-ticket deals and turning cold prospects into long-term partners — he treats every account like it's his own business.",
     highlights: ["Client onboarding & strategy", "Creative direction", "Sales & partnerships"],
     icon: Zap,
@@ -16,7 +16,7 @@ const founders = [
   },
   {
     name: "Giancarlos Minyetti",
-    role: "Co-Founder — Operations, Finance & Strategy",
+    role: "Founder — Operations, Finance & Strategy",
     bio: "Giancarlos founded DG Scales and runs the strategic engine behind it. He oversees campaign architecture, budget allocation, performance optimization, and the daily execution that keeps client accounts profitable. With a focus on scaling ad spend efficiently, he turns data into decisions that drive consistent ROI across every account we manage.",
     highlights: ["Media buying & scaling", "Performance optimization", "Operations & reporting"],
     icon: Megaphone,
