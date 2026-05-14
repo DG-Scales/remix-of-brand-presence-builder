@@ -16,7 +16,7 @@ const founders = [
   },
   {
     name: "Giancarlos Minyetti",
-    role: "Co-Founder — Operations, Finance & Strategy",
+    role: "Founder — Operations, Finance & Strategy",
     bio: "Giancarlos founded DG Scales and runs the strategic engine behind it. He oversees campaign architecture, budget allocation, performance optimization, and the daily execution that keeps client accounts profitable. With a focus on scaling ad spend efficiently, he turns data into decisions that drive consistent ROI across every account we manage.",
     highlights: ["Media buying & scaling", "Performance optimization", "Operations & reporting"],
     icon: Megaphone,
