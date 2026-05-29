@@ -6,6 +6,7 @@ import ProcessSection from "@/components/ProcessSection";
 import ResultsSection from "@/components/ResultsSection";
 import FAQSection from "@/components/FAQSection";
 import SocialSection from "@/components/SocialSection";
+import CalEmbed from "@/components/CalEmbed";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -27,6 +28,7 @@ const Index = () => {
       <ResultsSection />
       <FAQSection />
       <SocialSection />
+      <CalEmbed />
       <Footer />
     </div>
   );
