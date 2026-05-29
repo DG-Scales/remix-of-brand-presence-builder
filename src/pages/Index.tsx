@@ -1,13 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import CalEmbed from "@/components/CalEmbed";
-import ContactSection from "@/components/ContactSection";
-import SocialSection from "@/components/SocialSection";
 import AboutSection from "@/components/AboutSection";
 import ProcessSection from "@/components/ProcessSection";
 import ResultsSection from "@/components/ResultsSection";
 import FAQSection from "@/components/FAQSection";
+import SocialSection from "@/components/SocialSection";
+import CalEmbed from "@/components/CalEmbed";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -24,13 +23,12 @@ const Index = () => {
       </Helmet>
       <Navbar />
       <HeroSection />
-      <CalEmbed />
-      <ContactSection />
-      <SocialSection />
       <AboutSection />
       <ProcessSection />
       <ResultsSection />
       <FAQSection />
+      <SocialSection />
+      <CalEmbed />
       <Footer />
     </div>
   );
