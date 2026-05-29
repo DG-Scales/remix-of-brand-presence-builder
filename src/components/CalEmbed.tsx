@@ -64,10 +64,10 @@ export default function CalEmbed({ showHeading = true, className = "" }: CalEmbe
             </p>
           </div>
         )}
-        <div className="glass-card p-2 md:p-4 rounded-2xl overflow-hidden">
+        <div className="glass-card p-2 md:p-4 rounded-2xl">
           <div
             id="cal-inline-dg-scales"
-            style={{ width: "100%", height: "380px", overflow: "hidden" }}
+            style={{ width: "100%", minHeight: "750px", overflow: "visible" }}
           />
         </div>
       </div>
