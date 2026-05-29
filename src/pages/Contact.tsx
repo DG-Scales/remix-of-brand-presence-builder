@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
-import ContactSection from "@/components/ContactSection";
 import CalEmbed from "@/components/CalEmbed";
+import ContactSection from "@/components/ContactSection";
+import SocialSection from "@/components/SocialSection";
 import Footer from "@/components/Footer";
 
 const Contact = () => {
@@ -18,8 +19,9 @@ const Contact = () => {
       </Helmet>
       <Navbar />
       <div className="pt-24">
-        <ContactSection />
         <CalEmbed />
+        <ContactSection />
+        <SocialSection />
       </div>
       <Footer />
     </div>
