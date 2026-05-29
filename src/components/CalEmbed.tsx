@@ -66,7 +66,7 @@ export default function CalEmbed({ showHeading = true, className = "" }: CalEmbe
         )}
         <div
           id="cal-inline-dg-scales"
-          style={{ width: "100%", height: "700px", overflow: "scroll" }}
+          style={{ width: "100%", height: "520px" }}
           className="glass-card p-2 md:p-4 rounded-2xl"
         />
       </div>
